@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="582.0" prefWidth="1043.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerManager">
+   <children>
+      <Pane layoutX="-14.0" prefHeight="582.0" prefWidth="1058.0" style="-fx-background-color: #29363f;">
+         <children>
+            <Label layoutX="287.0" layoutY="101.0" prefHeight="78.0" prefWidth="567.0" text="SALES MANAGEMENT SYSTEM" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="41.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="159.0" layoutY="239.0" onAction="#Manage_Products" prefHeight="63.0" prefWidth="281.0" style="-fx-background-color: #6ed9a1;" text="Manage Products" textFill="#343a40">
+               <font>
+                  <Font name="Elephant" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="159.0" layoutY="324.0" onAction="#Manage_Stocks" prefHeight="63.0" prefWidth="281.0" style="-fx-background-color: #6ed9a1;" text="Manage Stocks" textFill="#343a40">
+               <font>
+                  <Font name="Elephant" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="159.0" layoutY="413.0" onAction="#Manage_Sales_Rep" prefHeight="63.0" prefWidth="281.0" style="-fx-background-color: #6ed9a1;" text="Manage Sales Rep" textFill="#343a40">
+               <font>
+                  <Font name="Elephant" size="20.0" />
+               </font>
+            </JFXButton>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="736.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="imGo" wrappingWidth="204.1679916381836">
+               <font>
+                  <Font name="Elephant" size="50.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="769.0" layoutY="417.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile">
+               <font>
+                  <Font name="Elephant" size="40.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="132.0" fitWidth="138.0" layoutX="604.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/pngtree-letter-z-3d-company-logo-design-png-image_4173414.jpg" />
+               </image>
+            </ImageView>
+            <Separator layoutX="526.0" layoutY="232.0" orientation="VERTICAL" prefHeight="248.0" prefWidth="23.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

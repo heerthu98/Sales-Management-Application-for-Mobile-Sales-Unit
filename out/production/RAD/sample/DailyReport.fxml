@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="1052.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DailyReport">
+   <children>
+      <AnchorPane layoutX="-1.0" prefHeight="82.0" prefWidth="1052.0" style="-fx-background-color: #006ba6;">
+         <children>
+            <Text fill="#dcff0f" layoutX="340.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SALES MANAGEMENT SYSTEM">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="57.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="imGo" wrappingWidth="127.1679916381836">
+               <font>
+                  <Font name="Elephant" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="76.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile">
+               <font>
+                  <Font name="Elephant" size="20.0" />
+               </font>
+            </Text>
+            <Separator layoutY="63.0" prefHeight="19.0" prefWidth="1046.0" />
+            <ImageView fitHeight="49.0" fitWidth="69.0" layoutX="8.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+
+                  <Image url="@../img/pngtree-letter-z-3d-company-logo-design-png-image_4173414.jpg" />  </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-1.0" layoutY="80.0" prefHeight="500.0" prefWidth="246.0" style="-fx-background-color: #2f4f4f;">
+         <children>
+            <JFXButton layoutY="181.0" prefHeight="74.0" prefWidth="246.0" style="-fx-background-color: #29363f; -fx-border-color: #008b5a;" text="Daily reports" textFill="WHITE">
+               <font>
+                  <Font name="Elephant" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="sideManageStock" layoutX="25.0" layoutY="89.0" onAction="#sidebar_Manage_Stock" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #006ba6;" text="Personal Stocks" textFill="WHITE">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="sideProductDetails" layoutX="23.0" layoutY="297.0" onAction="#sidebar_Product_Details" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #006ba6;" text="Product Details" textFill="WHITE">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="241.0" layoutY="80.0" prefHeight="498.0" prefWidth="813.0" style="-fx-background-color: #29363f; -fx-border-color: #000000;">
+         <children>
+            <JFXScrollPane layoutX="158.0" layoutY="94.0" prefHeight="202.0" prefWidth="405.0">
+               <children>
+                  <VBox fx:id="ManageProduct" prefHeight="98.0" prefWidth="421.0" style="-fx-background-color: dark;">
+                     <children>
+                        <TableView prefHeight="227.0" prefWidth="435.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Product ID" />
+                              <TableColumn prefWidth="110.0" text="Product name" />
+                              <TableColumn prefWidth="73.0" text="Price" />
+                              <TableColumn prefWidth="73.0" text="Quantity" />
+                              <TableColumn prefWidth="73.0" text="Sub total" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </JFXScrollPane>
+            <JFXButton layoutX="397.0" layoutY="340.0" prefHeight="35.0" prefWidth="166.0" style="-fx-background-color: indigo;" text="Add daily report" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <DatePicker layoutX="158.0" layoutY="340.0" prefHeight="35.0" prefWidth="174.0" style="-fx-background-color: indigo;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

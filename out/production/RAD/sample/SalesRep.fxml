@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="582.0" prefWidth="1058.0" style="-fx-background-color: #29363f;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerSalesrep">
+   <children>
+      <Label layoutX="287.0" layoutY="101.0" prefHeight="78.0" prefWidth="567.0" text="SALES MANAGEMENT SYSTEM" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="41.0" />
+         </font>
+      </Label>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="736.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="imGo" wrappingWidth="204.1679916381836">
+         <font>
+            <Font name="Elephant" size="50.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="769.0" layoutY="417.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile">
+         <font>
+            <Font name="Elephant" size="40.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="132.0" fitWidth="138.0" layoutX="604.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/pngtree-letter-z-3d-company-logo-design-png-image_4173414.jpg" />
+
+         </image>
+      </ImageView>
+      <Separator layoutX="526.0" layoutY="232.0" orientation="VERTICAL" prefHeight="248.0" prefWidth="23.0" />
+      <JFXButton fx:id="dailyReport" layoutX="228.0" layoutY="238.0" onAction="#DailyReport" prefHeight="61.0" prefWidth="230.0" style="-fx-background-color: #6ed9a1;" text="Daily Report">
+         <font>
+            <Font name="Forte" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="productDetails" layoutX="228.0" layoutY="428.0" onAction="#ProductDetails" prefHeight="61.0" prefWidth="230.0" style="-fx-background-color: #6ed9a1;" text="Product Details">
+         <font>
+            <Font name="Forte" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="manageStocks" layoutX="228.0" layoutY="332.0" onAction="#ManageStocks" prefHeight="61.0" prefWidth="230.0" style="-fx-background-color: #6ed9a1;" text="Personal Stocks">
+         <font>
+            <Font name="Forte" size="24.0" />
+         </font>
+      </JFXButton>
+   </children>
+</Pane>

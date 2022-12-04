@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="582.0" prefWidth="1043.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Manage_Stocks">
+   <children>
+      <AnchorPane layoutX="-1.0" prefHeight="82.0" prefWidth="1043.0" style="-fx-background-color: #006ba6;">
+         <children>
+            <Text fill="#dcff0f" layoutX="340.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SALES MANAGEMENT SYSTEM">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="57.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="imGo" wrappingWidth="127.1679916381836">
+               <font>
+                  <Font name="Elephant" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="76.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile">
+               <font>
+                  <Font name="Elephant" size="20.0" />
+               </font>
+            </Text>
+            <Separator layoutY="63.0" prefHeight="19.0" prefWidth="1046.0" />
+            <ImageView fitHeight="49.0" fitWidth="69.0" layoutX="8.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/pngtree-letter-z-3d-company-logo-design-png-image_4173414.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-1.0" layoutY="80.0" prefHeight="559.0" prefWidth="246.0" style="-fx-background-color: #2f4f4f;">
+         <children>
+            <JFXButton layoutX="10.0" layoutY="296.0" onAction="#Manage_Sales_Rep" prefHeight="49.0" prefWidth="217.0" style="-fx-background-color: #006ba6;" text="Manage Salesreps" textFill="WHITE">
+               <font>
+                  <Font name="Elephant" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="15.0" layoutY="90.0" onAction="#Manage_Products" prefHeight="49.0" prefWidth="217.0" style="-fx-background-color: #006ba6;" text="Manage Producton" textFill="WHITE">
+               <font>
+                  <Font name="Elephant" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutY="181.0" prefHeight="74.0" prefWidth="246.0" style="-fx-background-color: #29363f; -fx-border-color: #008b5a;" text="Manage Stocks" textFill="WHITE">
+               <font>
+                  <Font name="Elephant" size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="244.0" layoutY="80.0" prefHeight="559.0" prefWidth="810.0" style="-fx-background-color: #29363f; -fx-border-color: #000000;">
+         <children>
+            <Text fill="#ff7300" fontSmoothingType="LCD" layoutX="44.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product ID" textAlignment="RIGHT" wrappingWidth="82.0107421875">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#ff7300" fontSmoothingType="LCD" layoutX="38.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name" textAlignment="RIGHT">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#ff7300" fontSmoothingType="LCD" layoutX="70.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Count" textAlignment="RIGHT">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="tf_productID" layoutX="143.0" layoutY="171.0" prefHeight="25.0" prefWidth="165.0" />
+            <TextField fx:id="tf_proName" layoutX="143.0" layoutY="215.0" prefHeight="25.0" prefWidth="165.0" />
+            <TextField fx:id="tf_count" layoutX="143.0" layoutY="261.0" prefHeight="19.0" prefWidth="165.0" />
+            <JFXButton layoutX="210.0" layoutY="401.0" onAction="#update_Stock" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: #4B0082; -fx-border-color: #000000;" text="UPDATE" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <Separator orientation="VERTICAL" prefHeight="557.0" prefWidth="0.0" />
+            <JFXScrollPane layoutX="359.0" layoutY="176.0" prefHeight="103.0" prefWidth="421.0">
+               <children>
+                  <VBox fx:id="ManageProduct" prefHeight="98.0" prefWidth="421.0" style="-fx-background-color: dark;">
+                     <children>
+                        <TableView fx:id="manage_stocks" onMouseClicked="#on_clicked_stock" prefHeight="103.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn fx:id="col_productID" prefWidth="99.0" text="ID" />
+                              <TableColumn fx:id="col_proName" prefWidth="108.0" text="Name" />
+                              <TableColumn fx:id="col_count" prefWidth="102.0" text="Total" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </JFXScrollPane>
+            <Text fill="#ff7300" fontSmoothingType="LCD" layoutX="70.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" textAlignment="RIGHT" wrappingWidth="37.4609375">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#ff7300" fontSmoothingType="LCD" layoutX="57.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stock_Status" textAlignment="RIGHT" wrappingWidth="82.0107421875">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="tf_status" layoutX="143.0" layoutY="315.0" prefHeight="25.0" prefWidth="165.0" />
+            <DatePicker fx:id="tf_date" layoutX="139.0" layoutY="360.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

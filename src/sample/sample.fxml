@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:controller="sample.Login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="1040.0" style="-fx-background-color: #6ed9a1;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane layoutX="260.0" layoutY="85.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0">
+         <left>
+            <AnchorPane prefHeight="407.0" prefWidth="228.0" style="-fx-background-color: #29363f;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="80.0" layoutY="168.0" prefHeight="63.0" prefWidth="125.0" text="ZimGo" textFill="#fafafb">
+                     <font>
+                        <Font name="Segoe Print" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="108.0" prefHeight="62.0" prefWidth="171.0" text=".." textFill="#6ed9a1">
+                     <font>
+                        <Font size="96.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="90.0" prefHeight="92.0" prefWidth="51.0" text="." textFill="#6ed9a1">
+                     <font>
+                        <Font size="96.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="400.0" prefWidth="332.0" style="-fx-background-color: #29363f;" BorderPane.alignment="CENTER">
+               <children>
+                  <Line endX="-100.0" endY="212.19998168945312" layoutX="99.0" layoutY="115.0" startX="-100.0" />
+                  <TextField fx:id="username" layoutX="39.0" layoutY="159.0" prefHeight="34.0" prefWidth="215.0" promptText="username" style="-fx-border-color: #6fd9a1; -fx-text-inner-color:#fff; -fx-border-radius: 3px; -fx-border-width: 1px; -fx-background-color: #29363f;">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="55.0" fitWidth="57.0" layoutX="118.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/pngtree-letter-z-3d-company-logo-design-png-image_4173414.jpg" />
+                     </image>
+                  </ImageView>
+                  <PasswordField fx:id="password" layoutX="39.0" layoutY="214.0" prefHeight="34.0" prefWidth="215.0" promptText="  Password" style="-fx-background-color: #29363f; -fx-text-fill:#fff; -fx-border-width: 1px; -fx-border-radius: 3px; -fx-border-color: #54616a;" />
+                  <Button fx:id="loginBtn" layoutX="39.0" layoutY="276.0" mnemonicParsing="false" onAction="#Login" prefHeight="36.0" prefWidth="215.0" style="-fx-background-color: #6ed9a1;" text="Login" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="16.23" radius="7.615" width="16.23" />
+                     </effect>
+                  </Button>
+                  <Label layoutX="71.0" layoutY="328.0" prefHeight="18.0" prefWidth="151.0" text="Forgot your password" textFill="#596269">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="wrongLogIn" layoutX="39.0" layoutY="115.0" prefHeight="35.0" prefWidth="214.0" textFill="#ae1717" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
